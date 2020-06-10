@@ -1,9 +1,9 @@
 <?php
-    $servername="localhost";
-    $username="root";
-    $password="";
-    $dbname="library"; 
-    $conn= new mysqli($servername, $username, $password, $dbname);
+$ser="localhost";
+$use="root";
+$pass="";
+$db="library";
+    $conn=new mysqli($ser,$use,$pass,$db);
 
     $autor=$_POST['autor'];
 
