@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="style.css"> -->
     <title>Document</title>
 </head>
 <body>
@@ -12,9 +12,9 @@
         <h1>BIBLIOTEKA KAROL RZEPA</h1>
         </div>
         <div class="main">
-            <div class="a">
-                        <?php
-                            $conn = new mysqli("localhost", "root", "", "library", "3308");
+                <div class="a">
+                <?php
+                            $conn = new mysqli("localhost", "root", "", "library", );
                             $result4 = $conn->query("SELECT * FROM  autorzy");
                             echo("<h3>Usuń autora:</h3>");
                             echo("<form action='delete1.php' method='POST' >");
@@ -41,9 +41,9 @@
                             echo("</form>");
 
                         ?>
-            </div>
-            <div class="b">
-                        <?php
+                </div>
+                <div class="b">
+                <?php
                     $conn = new mysqli("localhost", "root", "", "library",);
                     $result1 = $conn->query("SELECT id_krzyz, autor, tytul FROM krzyz, autorzy, tytuly WHERE krzyz.id_autor=autorzy.id_autor AND krzyz.id_tytul=tytuly.id_tytul");
                     echo("<table class='tabelka' border=1");
@@ -68,9 +68,9 @@
                         echo("</tr>");
                     }
                     ?>
-            </div>
-            <div class="c">
-                        <h3>Autor</h3>
+                </div>
+                <div class="cl">
+                                            <h3>Autor</h3>
                     <form action="insert1.php" method="post">
                         <input type="text" name="autor" >
                         <input type="submit" value="Zapisz">
@@ -103,7 +103,7 @@
                     echo("<input type='submit' value='Zapisz'>");
                     echo("</form>");
                     ?>
-            </div>
+                </div>
         </div>
     </div>
 </body>
